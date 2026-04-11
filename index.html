@@ -249,7 +249,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <a href="#criteria">Investment Focus</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#team">Team</a>
-      <a href="/cdn-cgi/l/email-protection#c6aab3a586abafaaaaafa8a1a0a7abafaabfa9a0a0afa5a3e8a5a9ab" class="nav-cta-btn">Contact Us</a>
+      <a href="mailto:luc@millingfamilyoffice.com" class="nav-cta-btn">Contact Us</a>
     </div>
     <button class="nav-mobile-toggle" onclick="toggleMobile()"><span></span><span></span><span></span></button>
   </div>
@@ -437,7 +437,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <div class="owners-cta-box">
         <h3>Considering the Next Chapter for Your Business?</h3>
         <p>We welcome confidential conversations with business owners who may be considering a transition in the coming years.</p>
-        <a href="/cdn-cgi/l/email-protection#b7dbc2d4f7dadedbdbded9d0d1d6dadedbced8d1d1ded4d299d4d8da" class="owners-btn">Contact Us <span>→</span></a>
+        <a href="mailto:luc@millingfamilyoffice.com" class="owners-btn">Contact Us <span>→</span></a>
       </div>
     </div>
   </div>
@@ -479,8 +479,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <div class="contact-inner reveal">
     <h2>Start a Confidential Conversation</h2>
     <p>Whether you are a business owner considering a transition, a broker representing a client, or an advisor with a referral, we welcome the opportunity to connect.</p>
-    <a href="/cdn-cgi/l/email-protection#83e6eee2eaefc3f3efe2e0e6ebecefe7e6f1ade0ecee" class="contact-btn">Contact Us <span>→</span></a>
-    <p class="contact-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a0c5cdc1c9cce0d0ccc1c3c5c8cfccc4c5d28ec3cfcd">[email&#160;protected]</a></p>
+    <a href="mailto:luc@millingfamilyoffice.com" class="contact-btn">Contact Us <span>→</span></a>
+    <p class="contact-email">luc@millingfamilyoffice.com</p>
   </div>
 </section>
 
@@ -511,7 +511,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 try { document.documentElement.classList.add("js-enabled"); } catch(e){}
 try {
 window.addEventListener('scroll', function() {
@@ -547,6 +547,21 @@ function setFilter(filter) {
   if (visibleCount === 0) {
     if (!empty) {
       empty = document.createElement('div');
-      empty.id = 'portfolioEmpty';
+            empty.id = 'portfolioEmpty';
       empty.style.cssText = 'grid-column:1/-1;text-align:center;padding:64px 32px;background:var(--white);border-radius:6px;border:1px dashed rgba(12,30,51,0.12);';
-      empty.innerHTML = '<p style="font-family:var(--font-b
+      empty.innerHTML = '<p style="font-family:var(--font-body);font-size:14px;color:var(--text-mid);font-style:italic;">We are actively seeking our first acquisition. Check back for updates.</p>';
+      grid.appendChild(empty);
+    }
+    empty.style.display = '';
+  } else if (empty) { empty.style.display = 'none'; }
+}
+
+function toggleMobile() {
+  var menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+} catch(err) { console.error("Script error:", err); }
+</script>
+</body>
+</html>
